@@ -1,0 +1,60 @@
+@use "../../../styles/varsFiles/skillsVars.scss" as *;
+@use "../../../styles/animations.scss" as *;
+
+
+.skills-tree{
+    .category-f-e{
+        background: $CategoryFrontEndBG;
+    }
+    .category-b-e{
+        background: $CategoryBackEndBG;
+    }
+    .category-db{
+        background: $CategoryDataBaseBG;
+    }
+    padding: $SkillsTreePadding;
+    .anim-box{
+        z-index: 10;
+        top: 0;
+        left: 0;
+        animation: scaleYToEnd $SkillsTreeCatS ease forwards;
+    }
+    .skills-cat{
+        gap: $SkillsTreeCatsGap;
+        .skill-cat-item{
+            border-top-left-radius: $SkillsCatItemRadius;
+            border-top-right-radius: $SkillsCatItemRadius;
+            padding: $SkillsCatItemPadding;
+            h3{
+                z-index: 100;
+            }
+           
+        }
+    }
+    .skills-box{
+        grid-template-columns: repeat(auto-fit, $SkillsTreeGridCol);
+        grid-auto-rows: $SkillsTreeGridRow;
+        gap: $SkillsTreeGap;
+        z-index:  100;
+        padding: $SkillBoxPadding;
+        
+    }
+}
+.skills-box-cont{
+    
+    .anim-box{
+        transform: translate(-100%);
+        animation-duration: $SkillsTreeBoxS;
+        animation-delay: $SkillsTreeBoxDelayS;
+    }
+}
+
+.skill-item{
+    grid-template-rows: 70% 30%;
+
+    svg{
+        width: 100%;
+        height: 100%;
+        animation: fadeInBtm 0.8s ease forwards;
+    }
+}

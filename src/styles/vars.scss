@@ -1,0 +1,305 @@
+
+$CartLengthBG: rgb(181, 80, 3);
+$CartLengthColor: #ffffff;
+$CartLengthWX: 1.2rem;
+$CartLengthHY: 1.2rem;
+$CartLengthTop: -60%;
+$CartLengthLeft: 90%;
+$CartLengthTxtSize: 0.8rem;
+
+$NavLinksQuant: 4;
+$OfferBG: #222;
+$TranspNavBG: none;
+$OpenNavAnimMS: 0.5s;
+$CloseNavAnimMS: 0.2s;
+$NavHY: 10vh;
+
+/*----Sections Backgrounds----*/
+$NavBG: #1a1a1a;
+$HeroSectionBG: #1a1a1a;
+$ProductSectionBG: #1a1a1a;
+
+$featuresGradientPos: 34%;
+$featuresSectionGradientUpper: $ProductSectionBG;
+$featuresSectionBG: #252525;
+$TestimonialGradientPos: 0%;
+$TestimonialsSectionGradientUpper: $featuresSectionBG;
+$TestimonialsSectionBG: #afdeff;
+$FaqSectionBG: #1a1a1a;
+$FooterBG: #000;
+
+/*--Section secondary colors--*/
+
+$FeaturesTitleColor: #fff;
+$TestimonialTitleColor: #111;
+$FaqTitleColor: #fff;
+
+
+
+/* - Product Section - */
+
+$ProductSectionPaddingY: 60px;
+
+$ProductPrincipalHY: 80%;
+$ProductPrincipalGap: 20px;
+$ProductVisualsGap: 30px;
+
+$ProductImageContHY: 40vw;
+$ProductImageContWX: 40vw;
+
+$ProductImageHY: 100%;
+$ProductImageWX: 100%;
+
+$ProductImageHoverS: 0.7s;
+
+//$ProductVisuals768WX: 150vh;
+$ProductCarouselGeneralHY: 20%;
+$ProductCarouselContainerHY: auto;
+@media (max-width:768px) {
+    $ProductCarouselGeneralHY: 20% !important;
+}
+$ProductTypesCarHY: 20vh!important;
+$ProductTypesCarWX: 30vw;
+
+
+$ProductTypeItemWX: 7vw;
+$ProductTypeItemHY: 7vw;
+
+$ProductTypeItemBG: #fff;
+
+$ProductTypeSelectedBG: #09157e7a;
+$ProdTypeSelectedAnimS: 0.5s;
+
+$ProductTitleFontSize: 1.5rem;
+
+$ProductPriceFontSize: 1.2rem;
+$ProductPriceColor: #02ea19;
+
+$ProductDescFontSize: 0.8rem;
+
+$BuyContGap: 5vh;
+
+$StockTxtColor: black;
+$StockOptHoverBG: #1e79c88e;
+$StockOptHoverTxtColor: #000000;
+
+$ProductButtonWX: 100%;
+$ProductButtonHY: 7.5vh;
+
+$ProductButtonsGap: 0.5rem;
+$ProductButtonBuyNowBG: #2c7e09;
+$ProductButtonAddToCartBG: #eee;
+$ProductButtonAddToCartBRD: $ProductButtonBuyNowBG;
+
+$ProductInfoPaddingX: 10px;
+
+$ProductLowStockColor: red;
+$ProductHighLightedLSBRD: #000;
+$ProductHighLightedBG: red;
+$ProductHighLightedColor: #fff;
+$ProductHighLightedRadius: 20px;
+$ProductHighLightedPadding: 5px 10px;
+
+$ProductHighLightedNmbBRD: red 3px solid;
+$ProductHighLightedNmbBG: none;
+$ProductHighLightedNmbColor: #fff;
+$ProductHighLightedNmbRadius: 20px;
+$ProductHighLightedNmbPadding: 5px;
+
+$benefitBRDRadius: 10px;
+$benefitBRD: 3px green solid;
+$benefitItemGap: 10px;
+$benefitSVGWH: 0.89rem;
+$benefitSVGColor: green;
+$benefitsListPadding: 10px 20px;
+
+/* - Big Features Section */
+
+$FeaturesSectionHY:none;
+$FeaturesSectionPadding: 40vh 0;
+
+$FeatureImgBG: #fff;
+
+$FeaturesAmount: 3;
+$featuresAnimS: 1.5;
+$featureAnimDelay: 0.75;
+$featureAnimBG: rgb(25, 63, 199);
+$featureAnimBGHover: #1a47f9;
+
+$FeaturesSectionGap: 5rem;
+$FeaturesContGap: 4rem;
+
+$featuresGridGap: 8rem;
+
+$featureItemGap: 10px;
+$featureItemAlignY: space-evenly;
+
+$featureItem768WX: 90%;
+$featureItem768HY: 30vh;
+
+$featureItemPadding: 5vh;
+$featureItemBG: #1a1a1a;
+$featureItemImgSize: 9rem;
+$featureItemRadius: 30px;
+
+$featureItemTitleRadius: 20px;
+$featureItemTitleBG: none;
+$featureItemTitleColor: #9a9a9a;
+$featureItemTitlePaddingY: 10px;
+
+$featureItemDescBG: none;
+$featureItemDescColor: #fff;
+/* - Testimonials Section - */
+
+
+$TestimonialsContGap: 60px;
+$TestimonialsSectionHY: 120vh;
+$Testimonials768HY: 100vh;
+$TestimonialItemNameColor: #0d47a1;
+$TestimonialItemMsgColor: #1a1a1a;
+
+$TestimonialCarArrowHY: 3rem;
+$TestimonialCarArrowWX: 3rem;
+
+$TestimonialCarArrowBG: none;
+$TestimonialCarArrowColor: #0d47a1;
+$TestimonialCarArrowBGHover: #0d47a1 !important;
+$TestimonialCarArrowColorHover: $TestimonialsSectionBG;
+$TestimonialCarArrowBRD: #0d47a1 4px solid;
+
+
+/* - FAQ Section - */
+$FaqSectionHY: auto;
+$FaqSectionMaxHY: 10000px;
+$FaqSectionAlignY: flex-start;
+
+$FaqContPaddingY: 60px;
+$FaqContAlignHY: center;
+
+$FaqInsHY: 70%;
+$FaqInsAlignX: flex-start;
+
+$FaqInsGap: 1rem;
+$FaqInsDir: column;
+
+$FaqTitleHY: 15vh;
+$FaqTitleTxtSize: 2.1rem;
+$FaqTitleTxtSize768: 1.7rem;
+
+/* - Footer Section - */
+
+$FooterContHY: 50vh;
+$FooterFlexDir: column;
+$FooterAlignY: flex-start;//Recuerda qu
+$FooterAlignX: center;
+
+$FooterInsideWX: 80%;
+$FooterInsideHY: 70%;
+
+$FooLinksContWidth: 70%;
+$FooLinksContAlignX: center;
+$FooLinksContAlignY: center;
+$FooLinksContDir: column;
+$FooterLinksGap: 3rem;
+
+$FooOthLinksJustify: flex-start;
+
+$FooterRRSSContWidth: 57%;
+$FooRRSSContJustify: flex-start;
+$FooterRRSSInsWidth: auto;
+$FooterRRSSInsJustify: flex-start;
+$FooterRRSSGap:40px;
+
+$FooSectionTitleColor: #444;
+$FooLinkColor: #161616;
+$FooLinkHoverColor: #eee;
+$FooRRSSColor: #333;
+$FooRRSSHoverColor: #e9e9e9;
+
+
+/*---- Reusable's ----*/
+
+/* Call To Action Button */
+
+$CTABG: #0d47a1;
+$CTAHoverBG: #0d47a1;
+
+/* Carrousel */
+$CarouselTransitionMS: 0.5;
+$DefCarouselArrHoverBG: #419fb9f4;
+$DefCarouselItemBG: none;
+$DefCarouselItemWX: 20vw;
+
+$DefCarouselGap: 5%;
+//$Testimonial768Margin: 
+
+@media (max-width: 768px){
+    $DefCarouselMaxWX: 100% !important;
+}
+$DefCarouselMaxWX: 50vw;
+$DefCarouselHY: 40vh;
+$DefCarouselArrowContHY: 20vh;
+$DefCarouselArrowHY: 10vh;
+
+/* Accordion */
+
+$AccordionBRD: none;
+$AccordionBRDStyle: solid;
+
+$AccordionHY: auto;
+$AccordionBRDWidth: 5px;
+$AccordionContentOpenTransS: 1s;
+
+$AccordionTitleBG: #222;
+$AccordionTitleHoverBG: #444;
+$AccordiontTitleContTransS: 0.35s;
+$AccordionTitleWX: 100%;
+
+
+$AccordionTitle768WX: 100%;
+$AccordionTitleContAlignX: flex-start;
+$AccordionTitleContAlignY: center;
+$AccordionTitleContHY: 7vh;
+
+$AccordionOpenButtonWX: 10%;
+
+$AccordionContWX: 95%;
+$AccordionContentJustify: flex-start;
+$AccordionContentPaddingTop: 20px;
+$AccordionContentPaddingBottom : 20px;//<<<---- El padding Y del acordion se cambia en global vars
+
+$AccordionDefCols: 1;
+$AccordionColWX: 100vw;
+$AccordionItemHY: auto;
+$AccordionItemContentBG: #3c3c3c;
+$AccordionItemContentColor: #eee;
+$AccordionRowFinalHY: 90%;
+$AccordionRowFinalMaxHY: 50%;
+
+/* Custom Select*/
+
+$cusSelectBg: #eee;
+$cusSelectedColor: #111;
+$cusSelOptsContBg: #eee;
+$cusSelOptsContTxtColor: #777;
+$cusSelOptsContHoverBg: #7d98dd;
+$cusSelScrollbarWX: 10px;
+$cusSelScrollColor: #030f2b;
+$cusSelListOptsMaxHY: 35vh;
+
+$cusSelectOpenAnimS: 0.7s;
+
+/*----Custom Scrolls----*/
+
+$ScrollModernMiniHY: 7.5px;
+$ScrollModernMiniTrackBG: aqua;
+$ScrollModernMiniThumbBG: rgb(163, 163, 163);
+
+/*----Animations Vars Section----*/
+
+
+$NavLogoFadeInS: 1.2s;
+$NavLinksFadeInFactor: 420;
+$NavLinksFadeInMinMS: 1300ms;
+
+$ProductInfoFadeInS:0.9s;
