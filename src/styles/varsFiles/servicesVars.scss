@@ -6,10 +6,19 @@ $ServicesSectionTitleSize: 4rem;
 $ServicesSectionTitlePadding: 90px 0;
 
 $SrvGridContHY: 100%;
-$SrvGridWX: 85%;
-$SrvGridGap: 5%;
+$SrvGridWX: 100%;
+$SrvGridGap: 50px;
+$SrvGrid-Gap-768: 20px;
+$SrvGrid-Gap-1024: 50px;
+
+
+
 $SrvGridRowSize: 100%;
 $SrvGridColSize: minmax(0%, calc(50% - $SrvGridGap));
+
+$ServiceCard-WX: 45%;
+$ServiceCard-WX-1200: 46%;
+$ServiceCard-WX-768: 90vw;
 
 
 
@@ -18,7 +27,7 @@ $ServiceCardRadius: 20px;
 $ServiceCarBRD: solid 4px #b1d1ff;
 $ServiceCardTitleSize: 2rem;
 $ServiceCardTextSize: 1.2rem;
-$ServiceCardTextualPadding: 10px 20px;
+$ServiceCardTextualPadding: 0px 20px;
 
 
 $ServiceLineAnimS: 0.7s;

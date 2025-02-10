@@ -75,7 +75,6 @@
 }
 
 .skill-item{
-    grid-template-rows: 70% 30%;
     .skill-icon-mysql{
         .cls-1,.cls-4{fill:#00758f;}
         .cls-2,.cls-3{fill:#f29111;}
@@ -86,6 +85,7 @@
         perspective: 100px;
         .icon-cont{
             transition: all $LevitateIconAnimS;
+            font-size: 100%;
         }
         &::before{
             transition: all $LevitateIconAnimS, filter 10s;
@@ -115,5 +115,25 @@
         height: 100%;
         animation: fadeInBtm 0.8s ease forwards;
         
+    }
+}
+@media (max-width: 768px){
+    .skills-tree .skills-box{
+        grid-template-columns: repeat(auto-fit, 40vw);
+        padding: 6vh;
+
+    }
+    .skill-item .skill-icon::before{
+        bottom: 3vw;
+        width: 100%;
+    }
+}
+@media (max-width: 474px){
+    .skills-box-cont{
+        border-top-left-radius: $SkillsBox-Radius-474;
+        border-top-right-radius: $SkillsBox-Radius-474;
+    }
+    .skill-item .skill-icon::before{
+        bottom: 10vw;
     }
 }

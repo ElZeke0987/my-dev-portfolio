@@ -6,14 +6,14 @@ import CTA from "@/comps/reusable/cta/CTA";
 
 export default function Services(){
     return(
-        <section className="services-section overflow-hidden">
+        <section className="services-section overflow-hidden flex flex-col">
             <div className="flex w-full justify-center items-center">
                 <h2>Services</h2>
             </div>
             <div className="w-full flex justify-center srv-grid-cont">
-                <div className="grid srv-grid justify-center">
+                <div className="flex srv-grid justify-center">
                     {servicesList.map((srv, i)=>{
-                        return(<div className="service-card overflow-hidden w-full h-full " key={i}>
+                        return(<div className="service-card overflow-hidden flex flex-col" key={i}>
                             <Image src={!srv.imgUrl||srv.imgUrl==""?"/Images/Dummy/dummy-image.png":srv.imgUrl} className="princ-img w-full" width={1000} height={1000} alt={srv.alt||"imagen servicio"}/>
                             <div className="w-full flex justify-center"><div className="anim-line relative overflow-hidden"></div></div>
                             <div className="srv-textual">

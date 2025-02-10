@@ -19,7 +19,7 @@ export default function FormContact(){
 
     return(
         <div className="flex flex-col justify-center contact-form-container w-full">
-            <div className="w-full flex justify-center">
+            <div className="w-full flex flex-col items-center justify-center contact-form-brd overflow-hidden">
                 <form className="contact-form flex flex-col ">
                     <div className="flex flex-col">
                         <label>Full Name</label>
@@ -47,8 +47,16 @@ export default function FormContact(){
                         <textarea name="" id="input" className="form-control" rows="3" required="required"></textarea>
                         
                     </div>
-                    <button>Consultar</button>
+                    
                 </form>
+                <div className="submit-contact-cont w-full flex justify-center relative">
+                    
+                    <button className="submit-contact text-center overflow-hidden relative">
+                        <div className="anim-box"></div>
+                        <span className="text-box">Consultar</span>
+                    </button>
+                </div>
+                
             </div>
                 
             </div>

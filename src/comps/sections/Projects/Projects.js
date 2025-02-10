@@ -8,7 +8,10 @@ export default function Projects(){
         <section className="projects-section flex flex-col justify-center">
             <div>
                 <div className="w-full flex justify-center">
-                    <h2>Projects <span>{"(actually fiction pages)"}</span></h2>
+                    <div className="flex flex-col md:flex-row">
+                        <h2>Projects</h2>
+                        <span>{"(actually fiction pages)"}</span>
+                    </div>
                 </div>
                 <div className="">
 

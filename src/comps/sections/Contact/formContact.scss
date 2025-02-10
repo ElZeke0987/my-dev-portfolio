@@ -2,6 +2,7 @@
 
 .contact-form-container{
     gap: $ContactFormCont-Gap;
+    padding: $ContactFormCont-Padding;
 }
 
 .complexity-select{
@@ -24,12 +25,14 @@
 
 }
 
-
+.contact-form-brd{
+    border-radius: $ContactForm-Radius;
+    
+    border: $ContactForm-BRD;
+}
 
 .contact-form{
-    border-radius: $ContactForm-Radius;
     padding: $ContactForm-Padding;
-    border: $ContactForm-BRD;
     width: $ContactForm-WX;
     gap: $ContactForm-Gap;
     label{
@@ -98,5 +101,65 @@
         }
        
         
+    }
+}
+
+.submit-contact-cont{
+    padding: $SubmitCont-Padding;
+}
+
+.submit-contact{
+    width: $Submit-WX;
+    background-color: $Submit-BG;
+    border-radius: $ContactForm-Radius;
+    padding: $Submit-Padding;
+    color: $Submit-Color;
+    transition: all 0.6s;
+    .anim-box{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 10;
+        background-color: $SubmitAnim-BG;
+        transition: all 0.6s;
+        top: 0;
+        left: -100%;
+    }
+    .text-box{
+        position: relative;
+        z-index: 100;
+    }
+    &:hover{
+        color: $Submit-Hover-Color;
+        .anim-box{
+            left: 0;
+        }
+    }
+}
+
+
+@media (max-width: 1400px){
+    .contact-form-container{
+        padding: 100px;
+    }
+    .contact-form{
+        width: 70%;
+        padding: $ContactForm-Padding-1400;
+    }
+    .submit-contact-cont{
+        padding: 0;
+        .submit-contact{
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 768px){
+    .contact-form-container{
+        padding: 0;
+    }
+    .contact-form{
+        width: 100%;
+        padding: $ContactForm-Padding-768;
     }
 }

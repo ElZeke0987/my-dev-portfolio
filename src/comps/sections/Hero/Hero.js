@@ -8,9 +8,9 @@ import { heroBG, heroImages, ImgHeroBG, infoHero } from "@/global-vars";
 
 export default function HeroSection(){
     return(
-        <section className="hero-section first-hero flex justify-center">
+        <section className="hero-section first-hero flex justify-center items-center">
             <div className="flex flex-col h-full md:flex-row hero-cont items-center justify-center">
-                <div className={"md:w-1/2 textual-hero"+(ImgHeroBG?"relative":"")}>
+                <div className={"textual-hero flex flex-col items-center justify-center"+(ImgHeroBG?"relative":"")}>
                     <div className="w-full flex flex-col items-center justify-center">
                         <h1 className="text-4xl md:text-5xl font-bold mb-4 hero-title text-center">{infoHero[0].principalTitle}</h1>
                         <h2 className="text-lg mb-6 hero-sub">{infoHero[0].subTitle}</h2>

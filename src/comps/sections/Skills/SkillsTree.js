@@ -22,7 +22,7 @@ export default function SkillsTree({setSkillCat, skillCat}){
                     
                     {skillCat?.catSkills?.map((skill, i)=>{
                         return(<div key={i} className="skill-item grid h-full ">
-                            <motion.div key={skillCat.catName} className={`skill-icon skill-icon-${skill.skillId} flex justify-center`}> <div className="icon-cont">{skill.SkillIcon}</div></motion.div>
+                            <motion.div key={skillCat.catName} className={`skill-icon skill-icon-${skill.skillId} flex justify-center h-full w-full`}> <div className="icon-cont h-full w-full">{skill.SkillIcon}</div></motion.div>
                             
                         </div>)
                     })}

@@ -22,8 +22,7 @@
 .srv-grid{
     width: $SrvGridWX;
     align-content: center;
-    grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fit, $SrvGridColSize);
+    flex-wrap: wrap;
     gap: $SrvGridGap;
 }
 
@@ -31,6 +30,8 @@
     border-radius: $ServiceCardRadius;
     border: $ServiceCarBRD;
     transition: all $ServiceLineAnimS;
+    width: $ServiceCard-WX;
+    height: auto;
     .cta-cont{
         height: 30%;
         .cta-button{
@@ -85,5 +86,28 @@
     }
     p{
         font-size: $ServiceCardTextSize;
+    }
+}
+@media (max-width: 1200px) {
+    .srv-grid{
+        gap: $SrvGrid-Gap-1024
+    }
+    .service-card{
+        width: $ServiceCard-WX-1200;
+    }
+    
+}
+@media (max-width: 768px) {
+    .srv-grid{
+        gap: $SrvGrid-Gap-768;
+        flex-direction: row;
+        align-items: start;
+        .service-card{
+            width: $ServiceCard-WX-768;
+        }
+        .cta-cont{
+            height: auto;
+            padding: 10px;
+        }
     }
 }
