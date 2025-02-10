@@ -1,0 +1,37 @@
+/*Default vars for aplying them to all accordions in page*/
+
+$AccordionBRD: none;
+$AccordionBRDStyle: solid;
+
+$AccordionHY: auto;
+$AccordionBRDWidth: 5px;
+$AccordionContentOpenTransS: 1s;
+
+$AccordionTitleBG: #222;
+$AccordionTitleHoverBG: #444;
+$AccordiontTitleContTransS: 0.35s;
+$AccordionTitleWX: 100%;
+
+
+$AccordionTitle768WX: 100%;
+$AccordionTitleContAlignX: flex-start;
+$AccordionTitleContAlignY: center;
+$AccordionTitleContHY: 7vh;
+
+$AccordionOpenButtonWX: 10%;
+$AccordionOpenContWX: 2rem;
+$AccordionOpenContHY: 2rem;
+
+
+$AccordionContWX: 95%;
+$AccordionContentJustify: flex-start;
+$AccordionContentPaddingTop: 20px;
+$AccordionContentPaddingBottom : 20px;//<<<---- El padding Y del acordion se cambia en global vars
+
+$AccordionDefCols: 1;
+$AccordionColWX: 100vw;
+$AccordionItemHY: auto;
+$AccordionItemContentBG: #3c3c3c;
+$AccordionItemContentColor: #eee;
+$AccordionRowFinalHY: 90%;
+$AccordionRowFinalMaxHY: 50%;

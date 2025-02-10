@@ -1,3 +1,4 @@
+
 @keyframes fadeIn {
     0%{
         transform: translateY(-100%);
@@ -85,18 +86,7 @@
     }
 }
 
-@keyframes openCusSelectOpts {
-    0%{
 
-        transform: translateY(-50%) scaleY(0);
-        opacity: 0;
-    }
-    100%{
-        top: 110%;
-        transform: translateY(8 vb px) scaleY(1);
-        opacity: 1;
-    }
-}
 
 @keyframes scaleYToEnd{
     0%{

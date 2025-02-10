@@ -1,3 +1,4 @@
+"use-client";
 
 import { useEffect, useState } from "react";
 import "./customSelect.scss"
@@ -19,7 +20,7 @@ export default function CustomSelect(
     {defaults=false, defaultValue="none",defaultText="Seleccione una opcion", overDefaults=true,//Los custom defaults
         opts, Eleme=DefaultOptElem, //Recuerda siempre, id y texto
         onSelect, onOpen, //Controladores custom en x eventos del select
-        clases,
+        clases="def-class", 
         propTxt="txt", propVal="val",//Tener en cuenta esto para ver las propiedades de cada valor seleccionado, ya que son objetos los que seleccionamos, con una propiedad visual y otra funcional (txt e id)
         forEffectVal, forEffectTxt, 
         isOpenPar, setIsOpenPar,//Custom handlers de cuando se abra el customSelect
@@ -47,7 +48,7 @@ export default function CustomSelect(
     },[forEffectVal])
 
     useEffect(()=>{
-        handleEffectPar(selOpt, setSelOpt)
+        handleEffectPar&&handleEffectPar(selOpt, setSelOpt)
     },[onEffectPar])   
     /*Defaults
         --Agarra el defaultText o defaultValue
@@ -61,20 +62,28 @@ export default function CustomSelect(
     
     return(
         <div className={`cus-select-wrapper ${clases||clases?.join(" ")}`} data-value={selOpt[propVal]} >
-            <div className="cus-select">
+            <div className={`cus-select ${!isOpen?"open-radius":"closed-radius"}`}>
                 <div className="cus-select-selected opt-selected" data-value={selOpt[propVal]} onClick={()=>{handleOpen()}}>
                     {selOpt[propTxt]}
                 </div>
                 
             </div>
             {(isOpenPar!=undefined?isOpenPar:isOpen)&&
-                    (<div className="cus-select-options">
-                        {opts.map((opt, i)=>{
-                            return (Eleme===DefaultOptElem?
-                            <Eleme key={i} text={/*forEffectTxt||*/opt[propTxt]} value={opt[propVal]} onClick={()=>handleSelect(opt)} />:
-                            <Eleme className="cus-select-option" key={i} onClick={()=>handleSelect(opt[propVal])} />)
-                        })}
-                    </div>)
+                    (   
+                        <div className="cus-select-static-visualizer">
+                            <div className="cus-select-opts-visualizer">
+                                <div className={`cus-select-options ${isOpenPar&&"open-only-eff"}`}>
+                                    {opts.map((opt, i)=>{
+                                        return (Eleme===DefaultOptElem?
+                                        <Eleme key={i} text={/*forEffectTxt||*/opt[propTxt]} value={opt[propVal]} onClick={()=>handleSelect(opt)} />:
+                                        <Eleme className="cus-select-option" key={i} onClick={()=>handleSelect(opt[propVal])} />)
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+                        
+                    
+                    )
                 }
         </div>
         

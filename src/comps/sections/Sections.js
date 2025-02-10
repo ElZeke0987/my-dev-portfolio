@@ -3,14 +3,14 @@ import Header from "./Header/Header";
 import HeroSection from "./Hero/Hero";
 import "./general.scss";
 import Image from "next/image";
-import Testimonials from "./Testimonials/Testimonials";
 
 import FAQ from "./Faq/faq";
 import Footer from "./Footer/footer";
 import LazyFrame from "../reusable/LazyLoad/LazyFrame";
 import Projects from "./Projects/Projects";
 import Skills from "./Skills/Skills";
- 
+import Services from "./Services/Services.js";
+import Contact from "./Contact/Contact";
 
 export default function Sections(){
     return(
@@ -23,7 +23,6 @@ export default function Sections(){
                     {ImgTransNavBG&&<Image src={ImgTransNavUrl} width={500} height={500} alt="Fondo de Hero y Nav" className="w-full h-full absolute top-0 left-0 bg-first-trans"/>}
                 </div>
             </LazyFrame>
-            
             <LazyFrame>
                 <Projects/>
             </LazyFrame>
@@ -31,7 +30,11 @@ export default function Sections(){
                 <Skills/>
             </LazyFrame>
             <LazyFrame>
-                <Testimonials/>
+                <Services/>
+
+            </LazyFrame>
+            <LazyFrame>
+                <Contact/>
             </LazyFrame>
             <LazyFrame>
                 <FAQ/>

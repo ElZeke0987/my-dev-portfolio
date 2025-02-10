@@ -1,4 +1,4 @@
-import { faqList } from "@/global-vars";
+import { faqList } from "./faqVars";
 import Accordion from "../../reusable/Accordion/accordion";
 import "./faq.scss";
 

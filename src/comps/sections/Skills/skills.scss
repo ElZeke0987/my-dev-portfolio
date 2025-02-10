@@ -1,19 +1,38 @@
 @use "../../../styles/varsFiles/skillsVars.scss" as *;
 @use "../../../styles/animations.scss" as *;
 
+@mixin bgById($listIds, $mapIds){
+    @each $itemId in $listIds{
+        .category-#{$itemId}{
+            background: map-get($mapIds, $itemId);//Be sure that map-get will be deprecated in Dart Sass 3.0.0
+        }
+    }
+    
+}
+
+@mixin iconById($listIds, $mapIds){
+    @each $itemId in $listIds{
+        .skill-icon-#{$itemId} svg{
+            fill: map-get($mapIds, $itemId);//Be sure that map-get will be deprecated in Dart Sass 3.0.0
+        }
+        .skill-icon-#{$itemId}::before{
+            background: map-get($mapIds, $itemId);
+        }
+    }
+    
+}
+
+.skills-section{
+    h2{
+        font-size: $SkillsSectionTitleSize;
+    }
+}
 
 .skills-tree{
-    .category-f-e{
-        background: $CategoryFrontEndBG;
-    }
-    .category-b-e{
-        background: $CategoryBackEndBG;
-    }
-    .category-db{
-        background: $CategoryDataBaseBG;
-    }
+    @include bgById($Categories, $CategoriesColor);
     padding: $SkillsTreePadding;
     .anim-box{
+        height: 110%;
         z-index: 10;
         top: 0;
         left: 0;
@@ -37,11 +56,17 @@
         gap: $SkillsTreeGap;
         z-index:  100;
         padding: $SkillBoxPadding;
+        @include iconById($SkillIcons, $SkillIconsColor);
+        
         
     }
 }
 .skills-box-cont{
-    
+    border-top-left-radius: $SkillsBoxRadius;
+    border-top-right-radius: $SkillsBoxRadius;
+    position: relative;
+    z-index: 90;
+    margin-bottom: -1%;
     .anim-box{
         transform: translate(-100%);
         animation-duration: $SkillsTreeBoxS;
@@ -51,10 +76,44 @@
 
 .skill-item{
     grid-template-rows: 70% 30%;
-
+    .skill-icon-mysql{
+        .cls-1,.cls-4{fill:#00758f;}
+        .cls-2,.cls-3{fill:#f29111;}
+        .cls-3,.cls-4{fill-rule:evenodd;}
+    }
+    .skill-icon{
+        position: relative;
+        perspective: 100px;
+        .icon-cont{
+            transition: all $LevitateIconAnimS;
+        }
+        &::before{
+            transition: all $LevitateIconAnimS, filter 10s;
+            content: "";
+            position: absolute;
+            z-index: 10;
+            width: 60%;
+            height: 15px;
+            border-radius: 100%;
+            bottom: -15px;
+            left: auto;
+            filter: blur(10px);
+            transform: rotateX(45deg);
+        }
+        
+        &:hover{
+            .icon-cont{
+                transform: translateY(-10px);
+            }
+            &::before{
+                filter: brightness(1.2) blur(10px);
+            }
+        }
+    }
     svg{
         width: 100%;
         height: 100%;
         animation: fadeInBtm 0.8s ease forwards;
+        
     }
 }

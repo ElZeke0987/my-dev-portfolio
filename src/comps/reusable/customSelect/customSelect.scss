@@ -1,12 +1,27 @@
 @use "../../../styles/vars.scss" as *;
-@use "../../../styles/animations.scss" as *;
+//@use "../../../styles/animations.scss" as *;
+@use "./customSelectVars.scss" as *;
+
+@keyframes openCusSelectOpts {
+    0%{
+
+        transform: translateY(-250%);
+       
+    }
+    100%{
+        top: 100%;
+        transform: translateY(0);
+       // max-height: $cusSelListOptsMaxHY;
+
+    }
+}
 
 .cus-select-wrapper{
     position: relative;
     width: 100%;//200px;
     height: 100%;
     //padding: 10px;
-    animation: showOverflow 1s ease;
+    //animation: showOverflow 1s ease;
 }
 
 .cus-select{
@@ -25,18 +40,29 @@
     height: 100%;
     color: $cusSelectedColor
 }
-.cus-select-options{
-    
+
+.cus-select-static-visualizer{
+    overflow: hidden;
+    height: auto;
     position: absolute;
     width: 100%;
-    max-height: $cusSelListOptsMaxHY;
-    top: 100%;
-    left: 0%;
+}
+
+.cus-select-opts-visualizer{
+    
+    overflow: auto;
+    width: 100%;
+    animation: openCusSelectOpts $cusSelectOpenAnimS ease forwards;
+}
+.cus-select-options{
+
+    width: 100%;
+    height: auto;
+    overflow: auto;
     z-index: 99;
-    animation: openCusSelectOpts $cusSelectOpenAnimS ease;
+    
     background: $cusSelOptsContBg;
     color: $cusSelOptsContTxtColor;
-    overflow: auto;
     scrollbar-color: $cusSelScrollColor;
     scrollbar-width: $cusSelScrollbarWX;
     
@@ -63,6 +89,7 @@
 .cus-select-option{
     background: $cusSelOptsContBg;
     padding: 5px;
+    cursor: pointer;
     &:hover{
         background-color: $cusSelOptsContHoverBg;
     }

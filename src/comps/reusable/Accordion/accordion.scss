@@ -1,5 +1,6 @@
 @use "../../../styles/vars.scss" as *;
 @use "../../../styles/animations.scss" as *;
+@use "./accordionVars.scss" as *;
 
 @keyframes animAccordionOpen{
     from{
@@ -48,7 +49,12 @@
             z-index: 10;
         }
         .accordion-open-button{
+
             width: $AccordionOpenButtonWX;
+            .open-cont{
+                width: $AccordionOpenContWX;
+                height: $AccordionOpenContHY;
+            }
         }
         .accordion-content-cont{
             background-color: $AccordionItemContentBG;

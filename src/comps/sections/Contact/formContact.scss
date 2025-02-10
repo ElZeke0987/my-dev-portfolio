@@ -1,0 +1,102 @@
+@use "./contactVars.scss" as *;
+
+.contact-form-container{
+    gap: $ContactFormCont-Gap;
+}
+
+.complexity-select{
+    border-radius: $ComplexitySel-Radius;
+    border: $ComplexitySel-BRD;
+    width: $ComplexitySel-WX;
+    .complexity-button{
+        transition: all $ComplexitySel-AnimS;
+        padding: $ComplexitySel-Padding;
+        &:hover {
+            background-color: $ComplexitySel-Hover-BG
+        }
+    }
+    .selected{
+        background-color: $ComplexitySel-Selected-BG;
+        &:hover{
+            background-color: $ComplexitySel-Selected-BG;
+        }
+    }
+
+}
+
+
+
+.contact-form{
+    border-radius: $ContactForm-Radius;
+    padding: $ContactForm-Padding;
+    border: $ContactForm-BRD;
+    width: $ContactForm-WX;
+    gap: $ContactForm-Gap;
+    label{
+        font-size: $Label-Size;
+        color: $Label-Color;
+    }
+    .subject-gap{
+        gap: $Subject-Gap;
+    }
+    input, textarea, .cus-select, .cus-select-options{
+        padding: $Input-Padding;
+        border-radius: $Input-Radius;
+        border: $Input-BRD;
+        background-color: $Input-BG;
+        transition: all 0.5s;
+        &:hover{
+            background-color: $Input-Hover-BG;
+            border: $Input-Hover-BRD;
+        }
+        &:focus{
+            outline: none;
+           
+            
+            background-color: $Input-Focus-BG;
+            filter: brightness(1.2);
+            border: $Input-Focus-BRD;
+            color: $Input-Focus-Color;
+        }
+    
+    }
+    .cus-select-wrapper{
+        .open-radius{
+            transition: all calc($CusSelectOpts-AnimS - 0.25s);
+           
+        }
+        .closed-radius{
+             
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        .cus-select-selected{
+            color: #eee;
+        }
+        .cus-select-opts-visualizer{
+            animation-duration: $CusSelectOpts-AnimS;
+        }
+        
+        .cus-select-options{
+            background: #eeeeee03;
+            border-top: none;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            backdrop-filter: blur(10px);
+            padding: 0;
+            &:hover{
+                background-color: transparent;
+            }
+            .cus-select-option{
+                background: transparent;
+                transition: all 0.3s;
+                color: $CusSelect-Color;
+                &:hover{
+                    background-color: #eeeeee07;
+                }
+            }
+        }
+       
+        
+    }
+}

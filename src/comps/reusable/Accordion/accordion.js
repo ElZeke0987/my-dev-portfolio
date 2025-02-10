@@ -24,7 +24,7 @@ export default function Accordion({list, propTitle="title", propTxt="content"}){
         }
     },[selIndex])*/
     return(
-        <div className="rounded-xl accordion flex flex-col">
+        <div className="accordion flex flex-col">
             {list.map((item, index)=>{
                 
                 
@@ -44,7 +44,12 @@ export default function Accordion({list, propTitle="title", propTxt="content"}){
                         <div className="accordion-title flex justify-center" >
                             <h3>{item[propTitle]}</h3>
                         </div>
-                        <div className="accordion-open-button">{selIndex===index?"-":"+"}</div>
+                        <div className="accordion-open-button">
+                            <div className="open-cont flex justify-center items-center">
+                                {selIndex===index?"-":"+"}
+                            </div>
+                            
+                        </div>
                     </div>
                     <div className="accordion-content-cont flex justify-center items-center w-full">
                         <div className={`accordion-content flex flex-col ${selIndex===index?"open":""} items-center`} ref={content} style={selIndex===index?dynamicMaxHeight:undefined}>

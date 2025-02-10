@@ -25,14 +25,14 @@ $featuresSectionBG: #252525;
 $TestimonialGradientPos: 0%;
 $TestimonialsSectionGradientUpper: $featuresSectionBG;
 $TestimonialsSectionBG: #afdeff;
-$FaqSectionBG: #1a1a1a;
+
 $FooterBG: #000;
 
 /*--Section secondary colors--*/
 
 $FeaturesTitleColor: #fff;
 $TestimonialTitleColor: #111;
-$FaqTitleColor: #fff;
+
 
 
 
@@ -167,25 +167,6 @@ $TestimonialCarArrowBGHover: #0d47a1 !important;
 $TestimonialCarArrowColorHover: $TestimonialsSectionBG;
 $TestimonialCarArrowBRD: #0d47a1 4px solid;
 
-
-/* - FAQ Section - */
-$FaqSectionHY: auto;
-$FaqSectionMaxHY: 10000px;
-$FaqSectionAlignY: flex-start;
-
-$FaqContPaddingY: 60px;
-$FaqContAlignHY: center;
-
-$FaqInsHY: 70%;
-$FaqInsAlignX: flex-start;
-
-$FaqInsGap: 1rem;
-$FaqInsDir: column;
-
-$FaqTitleHY: 15vh;
-$FaqTitleTxtSize: 2.1rem;
-$FaqTitleTxtSize768: 1.7rem;
-
 /* - Footer Section - */
 
 $FooterContHY: 50vh;
@@ -240,54 +221,6 @@ $DefCarouselMaxWX: 50vw;
 $DefCarouselHY: 40vh;
 $DefCarouselArrowContHY: 20vh;
 $DefCarouselArrowHY: 10vh;
-
-/* Accordion */
-
-$AccordionBRD: none;
-$AccordionBRDStyle: solid;
-
-$AccordionHY: auto;
-$AccordionBRDWidth: 5px;
-$AccordionContentOpenTransS: 1s;
-
-$AccordionTitleBG: #222;
-$AccordionTitleHoverBG: #444;
-$AccordiontTitleContTransS: 0.35s;
-$AccordionTitleWX: 100%;
-
-
-$AccordionTitle768WX: 100%;
-$AccordionTitleContAlignX: flex-start;
-$AccordionTitleContAlignY: center;
-$AccordionTitleContHY: 7vh;
-
-$AccordionOpenButtonWX: 10%;
-
-$AccordionContWX: 95%;
-$AccordionContentJustify: flex-start;
-$AccordionContentPaddingTop: 20px;
-$AccordionContentPaddingBottom : 20px;//<<<---- El padding Y del acordion se cambia en global vars
-
-$AccordionDefCols: 1;
-$AccordionColWX: 100vw;
-$AccordionItemHY: auto;
-$AccordionItemContentBG: #3c3c3c;
-$AccordionItemContentColor: #eee;
-$AccordionRowFinalHY: 90%;
-$AccordionRowFinalMaxHY: 50%;
-
-/* Custom Select*/
-
-$cusSelectBg: #eee;
-$cusSelectedColor: #111;
-$cusSelOptsContBg: #eee;
-$cusSelOptsContTxtColor: #777;
-$cusSelOptsContHoverBg: #7d98dd;
-$cusSelScrollbarWX: 10px;
-$cusSelScrollColor: #030f2b;
-$cusSelListOptsMaxHY: 35vh;
-
-$cusSelectOpenAnimS: 0.7s;
 
 /*----Custom Scrolls----*/
 
