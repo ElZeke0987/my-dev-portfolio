@@ -131,6 +131,11 @@ export const skillsList = [
                 SkillIcon: svgList.react,
             },
             {
+                skillName: "TypeScript",
+                skillId: "typescript",
+                SkillIcon: svgList.typescript,
+            },
+            {
                 skillName: "Next.js",
                 skillId: "next",
                 SkillIcon: svgList.next,

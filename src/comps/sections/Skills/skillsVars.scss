@@ -29,11 +29,12 @@ $CategoriesColor: (
     db: #b1f1fa, //Databases
 );
 
-$SkillIcons: "react", "next", "sass", "tailwind", "node", "express", "sequelize", "mysql", "phpmyadmin";
+$SkillIcons: "react", "next", "typescript", "sass", "tailwind", "node", "express", "sequelize", "mysql", "phpmyadmin";
 
 $SkillIconsColor: (
     react: #61DAFB, 
     next: #222, 
+    typescript: #3178c6,
     sass: #CC6699,
     tailwind: #06B6D4,
     node: #83CD29,

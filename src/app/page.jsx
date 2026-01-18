@@ -1,6 +1,6 @@
 
 
-import Sections  from "../comps/sections/Sections";
+import Sections  from "@/comps/sections/Sections";
 
 export default function Home() {
   return (

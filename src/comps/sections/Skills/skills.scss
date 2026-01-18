@@ -1,4 +1,4 @@
-@use "../../../styles/varsFiles/skillsVars.scss" as *;
+@use "./skillsVars.scss" as *;
 @use "../../../styles/animations.scss" as *;
 
 @mixin bgById($listIds, $mapIds){

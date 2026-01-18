@@ -1,6 +1,6 @@
 import Image from "next/image"
 import "./projectItem.scss"
-
+ 
 export default function ProjectItem({title, subtitle, text,techs=[], img="/images/dummy/dummy-image.png", deployState, url}){
     return(
         <div className="project-item w-full h-full ">
