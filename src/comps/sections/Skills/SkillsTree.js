@@ -1,16 +1,23 @@
 
-import {skillsList} from "@/global-vars";
+import {skillsList} from "./skillVars";
 import "./skills.scss";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function SkillsTree({setSkillCat, skillCat}){
-    return(
+
+    useEffect(()=>{
+        setSkillCat(skillsList[Math.floor(Math.random() * skillsList.length)])
+    },[])
+    useEffect(()=>{
+        console.log("skillCat",skillCat);
+    }, [skillCat])
+    return( 
         <div className="skills-tree">
             <div className="skills-cat flex w-full justify-center">
                 {skillsList.map((cat, i)=>{
-                    return(<div className="relative skill-cat-item overflow-hidden">
-                            <h3 onClick={()=>setSkillCat(cat)}  className="relative" key={i}>
-                                
+                    return(<div className="relative skill-cat-item overflow-hidden"key={i}>
+                            <h3 onClick={()=>setSkillCat(cat)}  className="relative" >
                                 {cat.catName}
                             </h3>
                             {skillCat.catName==cat.catName&&<div className={`anim-box w-full h-full absolute category-${skillCat?.catId}`}></div>}

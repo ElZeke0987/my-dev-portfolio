@@ -1,10 +1,21 @@
 @use "./skillsVars.scss" as *;
 @use "../../../styles/animations.scss" as *;
+@use "sass:map";
+@use "sass:meta";
+
+@keyframes scaleYToEnd1{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(-0.9%);
+    }
+}
 
 @mixin bgById($listIds, $mapIds){
     @each $itemId in $listIds{
         .category-#{$itemId}{
-            background: map-get($mapIds, $itemId);//Be sure that map-get will be deprecated in Dart Sass 3.0.0
+            background: map.get($mapIds, $itemId);//Be sure that map-get will be deprecated in Dart Sass 3.0.0
         }
     }
     
@@ -13,10 +24,25 @@
 @mixin iconById($listIds, $mapIds){
     @each $itemId in $listIds{
         .skill-icon-#{$itemId} svg{
-            fill: map-get($mapIds, $itemId);//Be sure that map-get will be deprecated in Dart Sass 3.0.0
+            
+            $value: map.get($mapIds, $itemId);
+            @if $value {
+                @if meta.type-of($value) == "map" and map.get($value, bg) != none {
+                fill: map.get($value, bg);
+                } @else if meta.type-of($value) != "map" {
+                fill: $value;
+                }
+            }
         }
         .skill-icon-#{$itemId}::before{
-            background: map-get($mapIds, $itemId);
+            $value: map.get($mapIds, $itemId);
+            @if $value {
+                @if meta.type-of($value) == "map" and map.get($value, shadow) != none {
+                background: map.get($value, shadow);
+                } @else if meta.type-of($value) != "map" {
+                background: $value;
+                }
+            }
         }
     }
     
@@ -32,11 +58,11 @@
     @include bgById($Categories, $CategoriesColor);
     padding: $SkillsTreePadding;
     .anim-box{
-        height: 110%;
+        height: 101%;
         z-index: 10;
         top: 0;
         left: 0;
-        animation: scaleYToEnd $SkillsTreeCatS ease forwards;
+        animation: scaleYToEnd1 $SkillsTreeCatS ease forwards;
     }
     .skills-cat{
         gap: $SkillsTreeCatsGap;
@@ -66,7 +92,8 @@
     border-top-right-radius: $SkillsBoxRadius;
     position: relative;
     z-index: 90;
-    margin-bottom: -1%;
+    margin-bottom: -$SkillOverNextSection;
+    padding-bottom: $SkillOverNextSection;
     .anim-box{
         transform: translate(-100%);
         animation-duration: $SkillsTreeBoxS;
@@ -121,7 +148,11 @@
     .skills-tree .skills-box{
         grid-template-columns: repeat(auto-fit, 40vw);
         padding: 6vh;
-
+        
+    }
+    .skills-box-cont{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
     }
     .skill-item .skill-icon::before{
         bottom: 3vw;
