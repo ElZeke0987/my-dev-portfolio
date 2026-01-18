@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./lazyFrame.scss";
 
-export default function LazyFrame({children, fullViewport=true}){
+export default function LazyFrame({children, fullViewport=true, id}){
     const [isVisible, setIsVisible]=useState(false);
     const lazyElementRef = useRef(null)
     useEffect(()=>{
@@ -17,5 +17,5 @@ export default function LazyFrame({children, fullViewport=true}){
         
         obs.observe(lazyElementRef.current)
     },[])
-    return(<div ref={lazyElementRef} className={isVisible?"lazy-load-visible":`lazy-loading-invisible flex justify-center items-center ${fullViewport&&"full-viewport"}`}>{isVisible?children:"cargando"}</div>)
+    return(<div ref={lazyElementRef} className={isVisible?"lazy-load-visible":`lazy-loading-invisible flex justify-center items-center ${fullViewport&&"full-viewport"}`} id={id}   >{isVisible?children:"cargando"}</div>)
 }

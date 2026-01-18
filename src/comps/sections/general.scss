@@ -1,5 +1,10 @@
 @use "../../styles/vars.scss" as *;
 
+.nav-sticky-conf{
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
 .vh-full{
     height: 100vh;
 }

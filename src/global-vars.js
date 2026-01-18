@@ -2,13 +2,13 @@ import { rrssIcons, svgList } from "./svg-elements";
 
 export const ImgHeroBG = false;//Fondo en la hero section de imagen
 export const ImgTransNavBG = true;
-export const ImgTransNavUrl="";
+export const ImgTransNavUrl="/images/hero-bg.png";
 export const addToCartSystem = false;
 
 export const taxes=10;//%
 export const delivery=0;//USD o $
 
-export const heroBG="";
+export const heroBG="/images/hero-bg.png";
 
 export const projects=[
     {

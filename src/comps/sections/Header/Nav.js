@@ -11,7 +11,7 @@ export default function Nav(){
     return (
         <div className="w-full">
             <nav className=" w-full nav-toggler-height">
-                <div className="p-4  flex justify-between items-center nav-toggler wi-full nav-transp-item">
+                <div className=" flex justify-center items-center nav-toggler wi-full nav-transp-item">
                     <a href="#" className="text-white text-lg font-bold nav-logo">{titlesObj.logoTitle}</a>
                     <div className="hidden md:flex space-x-4 nav-links-list">
 
@@ -33,7 +33,7 @@ export default function Nav(){
                 <div id="menu" className={(openNavbar?" open-nav":"  closed-nav")+" md:hidden nav-toggler-list bg-gray-800 nav-transp-item nav-links-list"} onClick={()=>setOpenNavbar(false)}>
                         {
                             navLinks.map((linkObj, i)=>{
-                                return (<a href={linkObj.href} className={`block text-gray-300 hover:text-white anim-${i+1} relative nav-link-item`} key={i} >
+                                return (<a href={linkObj.href}  className={`block text-gray-300 hover:text-white anim-${i+1} relative nav-link-item`} key={i} >
                                     {linkObj.text}
                                 </a>)
                             })

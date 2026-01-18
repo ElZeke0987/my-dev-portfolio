@@ -1,8 +1,14 @@
 @use "../../../styles/vars" as *;
 @use "../../../styles/animations.scss" as *;
+@use "./headerVars.scss" as *;
+
+html{
+    scroll-behavior: smooth;
+}
 
 .nav-toggler{
     background-color: $NavBG;
+    gap: $NavGapSeparation;
 }
 
  .wi-full{

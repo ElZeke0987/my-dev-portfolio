@@ -34,7 +34,7 @@ export default function Accordion({list, propTitle="title", propTxt="content"}){
                 const getContMaxHeight=computedSstyles.getPropertyValue("max-height");
                 const getContTransDur=computedSstyles.getPropertyValue("transition-duration");
                 const maths=(getContTransDur/getContMaxHeight)*getContHeight*getContMaxHeight;*/
-                console.log(getContHeight*2)
+                //console.log(getContHeight*2)
                 const dynamicMaxHeight={
                     maxHeight:`${getContHeight*2}px`,
                 }

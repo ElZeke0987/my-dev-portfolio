@@ -9,7 +9,7 @@ export default function Projects(){
             <div>
                 <div className="w-full flex justify-center">
                     <div className="flex flex-col md:flex-row">
-                        <h2>Projects</h2>
+                        <h2 >Projects</h2>
                         <span>{"(actually fiction pages)"}</span>
                     </div>
                 </div>
