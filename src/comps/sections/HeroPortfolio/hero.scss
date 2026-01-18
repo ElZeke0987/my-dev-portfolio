@@ -79,6 +79,12 @@
         }
     }
 }
+.hero-me{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
 @media (max-width:768px){
     .hero-section{
         height: 100vh;

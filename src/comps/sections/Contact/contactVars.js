@@ -17,3 +17,9 @@ export const subjects=[
         val:"other",
     }
 ]
+
+export const emailJsIds={
+    serviceId: "service_portfolio_sebseg",
+    templateId: "template_with_subject",
+    userId: "64Y3-Dp84f6wLW9aE",
+}

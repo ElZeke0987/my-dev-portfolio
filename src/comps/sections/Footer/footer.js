@@ -1,5 +1,6 @@
 "use client";
-import { footerLinksSections, footerRRSS } from "@/global-vars";
+import { footerLinksSections, footerRRSS } from "./footerVars.js";
+
 import "./footer.scss";
 
 function FooterLinks(){
@@ -25,6 +26,9 @@ function FooterLinks(){
                 })}
             </div>
             <RRSSCont/>
+            <div className="footer-copyright flex justify-center items-center">
+                ©2025 Copyright Sebastian Segatori All Rights Reserved
+            </div>
         </div>
     )
 }
@@ -32,13 +36,12 @@ function FooterLinks(){
 function RRSSCont(){
     return(
         <div className="footer-rrss-cont flex">
-            <div className="footer-rrss flex ">
+            <div className="footer-rrss flex items-center">
                 {
                     footerRRSS.map((rrss, i)=>{
                         return(
                             <div className="footer-rrss-item" key={i}>
-                                <h3>{rrss.alt}</h3>
-                                <a></a>
+                                <a className={`rrss-${rrss.alt}`} href={rrss.href} target="_blank">{rrss.icon}</a>
                             </div>
                         )
                     })

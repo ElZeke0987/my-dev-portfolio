@@ -1,16 +1,16 @@
 import { ImgTransNavBG, ImgTransNavUrl } from "@/global-vars";
-import Header from "./Header/Header";
-import HeroSection from "./Hero/Hero";
+import Header from "./Header/Header.js";
+import HeroSection from "./HeroPortfolio/Hero.js";
 import "./general.scss";
 import Image from "next/image";
 
-import FAQ from "./Faq/faq";
-import Footer from "./Footer/footer";
-import LazyFrame from "../reusable/LazyLoad/LazyFrame";
-import Projects from "./Projects/Projects";
-import Skills from "./Skills/Skills";
+import FAQ from "./Faq/faq.js";
+import Footer from "./Footer/footer.js";
+import LazyFrame from "../reusable/LazyLoad/LazyFrame.js";
+import Projects from "./Projects/Projects.js";
+import Skills from "./Skills/Skills.js";
 import Services from "./Services/Services.js";
-import Contact from "./Contact/Contact";
+import Contact from "./Contact/Contact.js";
 
 export default function Sections(){
     return(

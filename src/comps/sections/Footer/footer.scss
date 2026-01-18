@@ -1,8 +1,11 @@
 
 @use "../../../styles/vars.scss" as *;
+@use "../../../styles/varsFiles/footerVars.scss" as *;
+
 .landing-footer-cont{
     background-color: $FooterBG;
     min-height: $FooterContHY;
+    padding: $FooterCont-Padding;
     flex-direction: $FooterFlexDir;
     justify-content: $FooterAlignX;
     align-items: $FooterAlignY;
@@ -15,6 +18,7 @@
         justify-content: $FooLinksContAlignX;
         align-items: $FooLinksContAlignY;
         flex-direction: $FooLinksContDir;
+        gap: $FooLinksCont-Gap;
         .footer-other-links{
             gap: $FooterLinksGap;
             justify-content: $FooOthLinksJustify;
@@ -35,7 +39,11 @@
     
     .footer-rrss-cont{
         width: $FooterRRSSContWidth;
+        height: $FooterRRSSCont-HY;
         justify-content: $FooRRSSContJustify;
+        border-left: $Footer-BRD;
+        border-right: $Footer-BRD;
+        padding: $Footer-RRSSCont-Padding;
         .footer-rrss{
             width: $FooterRRSSInsWidth;
             justify-content: $FooterRRSSInsJustify;
@@ -49,5 +57,39 @@
             }
         }
     }
+}
+.footer-rrss-item{
+    svg{
+        path{
+            transition: all 0.36s;
+        }
+        width: $FooRRSSSize;
+        height: $FooRRSSSize;
+    }
+    .rrss-IN{
+        &:hover{
+            .cls-1{fill:#0a66c2}
+            .cls-1,.cls-2{fill-rule:evenodd}
+            .cls-2{fill:#fff}
+        }
+        .cls-1{fill: $FooRRSS-Principal-Color}
+        .cls-2{fill: $FooRRSS-Secondary-Color;}
+    }
+    .rrss-FB{
+        .cls-1{fill: $FooRRSS-Principal-Color}
+        .cls-2{fill: $FooRRSS-Secondary-Color}
+        &:hover{
+            .cls-1{fill: #0866FF}
+            .cls-2{fill: #fff}
+        }
+    }
+    .rrss-IG{
+        .cls-1{fill: $FooRRSS-Principal-Color}
+        .cls-2{fill: $FooRRSS-Secondary-Color}
+        &:hover{
 
+            .gr-1{fill: url(#c)}
+            .gr-2{fill: url(#d)}
+        }
+    }
 }

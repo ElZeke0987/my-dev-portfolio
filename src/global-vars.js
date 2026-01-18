@@ -1,4 +1,4 @@
-import { svgList } from "./svg-elements";
+import { rrssIcons, svgList } from "./svg-elements";
 
 export const ImgHeroBG = false;//Fondo en la hero section de imagen
 export const ImgTransNavBG = true;
@@ -12,15 +12,6 @@ export const heroBG="";
 
 export const projects=[
     {
-        title: "Project title 1",
-        subtitle: "Project subtitle 1",
-        text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the `,
-        deployState: false,
-        techs: ["react", "node", "sass", "express", "tailwind"],
-        img:"",
-    },
-    {
         title: "Landing page para auriculares",
         subtitle: "",
         text: `Me desafie a hacer una landing page comun pero convertible y bonita para auriculares `,
@@ -29,12 +20,11 @@ export const projects=[
         img: "",
     },
     {
-        title: "Project title 3",
-        subtitle: "Project subtitle 3",
-        text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text e`,
+        title: "Portafolio",
+        subtitle: "Este mismo",
+        text: `Es un proyecto que con la misma plantilla que hice anteriormente, bien modificada, pude hacerla en 3 dias`,
         deployState: true,
-        techs: ["react", "node", "sass", "express", "tailwind"],
+        techs: ["react", "next", "sass", "express", "tailwind"],
         img: "",
     }
 ]
@@ -50,8 +40,10 @@ export const infoHero=[
 
 export const navLinks=[
     {href:"/", text:"Start"},
-    {href:"#features", text:"Projects"},
-    {href:"#testimonials", text:"Testimonials"},
+    {href:"#projects", text:"Projects"},
+    {href:"#skills", text:"Skills"},
+    {href:"#services", text:"Services"},
+    {href:"#contact", text:"Contact Me"},
 ]
 
 export const titlesObj={
@@ -196,90 +188,7 @@ export const skillsList = [
     },
 ]
 
-export const footerLinksSections=[
-    {
-        title: "Navegacion",
-        links: [
-            {
-                txt: "Inicio",
-                href: "",
-            },
-            {
-                txt: "Compra ahora",
-                href: "",
-            },
-            {
-                txt: "Caracteristicas",
-                href: "",
-            },
-            {
-                txt: "Testimonios",
-                href: "",
-            },
-            {
-                txt: "FAQ",
-                href: "",
-            },
-        ]
-    },
-    {
-        title: "Otras paginas",
-        links: [
-            {
-                txt: "StreetWearer",
-                href:"",
-            },
-            {
-                txt: "E-commerce templates",
-                href:"",
-            },
-            {
-                txt: "SmirXFolio",
-                href:"",
-            },
-        ]
-    },
-    {
-        title: "Contacto",
-        links: [
-            {
-                txt: "Sugerencias y dudas",
-                href:"",
-            },
-            {
-                txt: "Inversores",
-                href:"",
-            },
-            {
-                txt: "Errores",
-                href:"",
-            },
-        ]
-    }
-]
 
-export const footerRRSS=[
-    {
-        icon: "",
-        alt: "IG",
-        href: "",
-    },
-    {
-        icon: "",
-        alt: "FB",
-        href: "",
-    },
-    {
-        icon: "",
-        alt: "TW",
-        href: "",
-    },
-    {
-        icon: "",
-        alt: "YT",
-        href: "",
-    },
-]
 
 export const heroImages=[
     {

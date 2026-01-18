@@ -12,6 +12,7 @@ export default function HeroSection(){
             <div className="flex flex-col h-full md:flex-row hero-cont items-center justify-center">
                 <div className={"textual-hero flex flex-col items-center justify-center"+(ImgHeroBG?"relative":"")}>
                     <div className="w-full flex flex-col items-center justify-center">
+                        <Image src="/images/me/me-10-10.jpg" width={1000} height={1000} className="hero-me"/>
                         <h1 className="text-4xl md:text-5xl font-bold mb-4 hero-title text-center">{infoHero[0].principalTitle}</h1>
                         <h2 className="text-lg mb-6 hero-sub">{infoHero[0].subTitle}</h2>
                     </div>

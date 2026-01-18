@@ -6,21 +6,28 @@ export const faqList =[
         linkTxt: "Mas info de como usar un gorro",
     },
     {
-        question: "Are the headphones compatible with all devices?",
-        answer: "Yes, all our headphones are compatible with Android, iOS, PC, and gaming consoles using either Bluetooth or a 3.5 mm cable, depending on the model you choose.",
+        question: "How much does a website cost",
+        answer: `For the first client, it will cost $50 only for a landing page`,
         optLink: "",
         linkTxt: "Mas info de como usar un gorro",
     },
     {
-        question: "What kind of warranty do you offer?",
-        answer: `All our headphones come with a 1-year warranty covering manufacturing defects. If you experience any issues, just reach out, and we’ll take care of it.`,
+        question: "Is this portfolio still on work?",
+        answer: "Of course, yes. You can send me a feedback by my LinkedIn, Instagram or Facebook for any suggestion or problem with portfolio",
         optLink: "",
         linkTxt: "Mas info de como usar un gorro",
     },
     {
-        question: "What should I do if I have an issue with my order?",
-        answer: `If you experience any problems with your order, you can email us at support@myshopofheadphones.com or fill out the form in the Contact section. Our team will respond within 24-48 hours.`,
+        question: "How do you work?",
+        answer: `You say me your vision and I will do the best to bring it to reality in a web solution, I mean, as a freelancer and you will only pay project price`,
         optLink: "",
         linkTxt: "Mas info de como usar un gorro",
     },
+    {
+        question: "Maintenance is included?",
+        answer: `For problems and fixin, it's totally free for the next 3 months. For updates, it costs less if it's a website created by me`,
+        optLink: "",
+        linkTxt: "Mas info de como usar un gorro",
+    },
+    
 ]

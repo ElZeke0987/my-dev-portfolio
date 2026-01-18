@@ -52,3 +52,8 @@
         color: $ProjectItemTxtColor;
     }
 }
+@media (hover: none){
+    .project-item .over-text{
+        opacity: 1;
+    }
+}

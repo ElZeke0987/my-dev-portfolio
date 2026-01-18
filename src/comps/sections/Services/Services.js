@@ -14,7 +14,7 @@ export default function Services(){
                 <div className="flex srv-grid justify-center">
                     {servicesList.map((srv, i)=>{
                         return(<div className="service-card overflow-hidden flex flex-col" key={i}>
-                            <Image src={!srv.imgUrl||srv.imgUrl==""?"/Images/Dummy/dummy-image.png":srv.imgUrl} className="princ-img w-full" width={1000} height={1000} alt={srv.alt||"imagen servicio"}/>
+                            <Image src={srv.imgUrl==""?"/public/images/dummy/dummy-image.png":srv.imgUrl} className="princ-img w-full" width={1000} height={1000} alt={srv.alt||"imagen servicio"}/>
                             <div className="w-full flex justify-center"><div className="anim-line relative overflow-hidden"></div></div>
                             <div className="srv-textual">
                                 <h3>{srv.title}</h3>
