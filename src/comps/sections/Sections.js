@@ -11,28 +11,29 @@ import Projects from "./Projects/Projects.js";
 import Skills from "./Skills/Skills.js";
 import Services from "./Services/Services.js";
 import Contact from "./Contact/Contact.js";
-import TerminalInit from "../terminalInit/TerminalInit.js";
 import { useRef, useState, useEffect } from "react";
+import SuperiorHandler from "../terminalInit/SuperiorHandler.js";
 
 export default function Sections(){
 
-    const navRef = useRef(null);
-    const limitRef = useRef(null);
-    const dynamicLimitRef = useRef(null);
-    const [style, setStyle] = useState({});
-    const [oneStyleSet, setOneStyleSet] = useState(false);
+  const navRef = useRef(null);
+  const limitRef = useRef(null);
+  const dynamicLimitRef = useRef(null);
+  const [style, setStyle] = useState({});
+  const [oneStyleSet, setOneStyleSet] = useState(false);
+  
 
   useEffect(() => {
     const onScroll = () => {
       const nav = navRef.current;
       const limit = limitRef.current;
-      const dynamicLimit = dynamicLimitRef.current;
+      //const dynamicLimit = dynamicLimitRef.current;
 
-      if (!nav || !limit || !dynamicLimit) return;
+      if (!nav || !limit) return;
 
       const navRect = nav.getBoundingClientRect();
       const limitRect = limit.getBoundingClientRect();
-      const dynamicLimitRect = dynamicLimit.getBoundingClientRect();
+      //const dynamicLimitRect = dynamicLimit.getBoundingClientRect();
 
       const navHeight = nav.offsetHeight;
       //console.log({navRectTop: Math.round(navRect.top), limitRectTop: Math.round(limitRect.top), navHeight});
@@ -67,13 +68,12 @@ export default function Sections(){
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
     }, []);
-   
+    
+
     return(
         <>
         <LazyFrame >
-            <div ref={dynamicLimitRef}>
-                <TerminalInit/>
-            </div>
+            <SuperiorHandler/>
         </LazyFrame>
         <div className="flex flex-col" ref={limitRef}>
             

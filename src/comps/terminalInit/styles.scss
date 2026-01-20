@@ -3,3 +3,27 @@
     color: #00ff00;
 }
 
+.icon-to-show{
+    cursor: pointer;
+    transform: rotate(-90deg);
+}
+.show-again-cont{
+    background: linear-gradient(180deg,transparent 10%, rgba(16, 16, 28, 1) 55%);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+    &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(180deg,transparent 50%, rgba(16, 16, 28, 1) 70%);
+        transition: all 0.3s ease-in-out;
+        z-index: 10;
+        &:hover{
+            transform: translateY(-10px);
+        }
+    }
+}
