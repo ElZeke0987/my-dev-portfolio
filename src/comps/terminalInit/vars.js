@@ -1,0 +1,10 @@
+export const userRoleInAnimation = "auto"
+
+export const valorHLetra = window.innerHeight/4;
+export const nonExistingChar = "\u200B";
+export const timesToRepeatChar = 7;
+export const autoAnimationDuration = userRoleInAnimation==="manual"?0:10;
+const dots = `${nonExistingChar.repeat(timesToRepeatChar)}.${nonExistingChar.repeat(timesToRepeatChar)}.${nonExistingChar.repeat(timesToRepeatChar)}.`;
+const nullCharsAtTheEnd = `${nonExistingChar.repeat(userRoleInAnimation==="manual"?0:20)}`;
+export const firstAutoText = `> initializing ${window.location.hostname}\n> loading web engineer${userRoleInAnimation === "semi-manual" ? "\n> Scroll to continue" : ""}`;
+export const text = `${firstAutoText}\n> ${dots}\n> Front-End focused\n> Full-stack capable${nullCharsAtTheEnd}`;

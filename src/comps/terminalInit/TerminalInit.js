@@ -6,23 +6,25 @@ import { scrollToSmooth } from "./scrollToSmoothAsync";
 
 import React,{ useRef, useEffect, useState, } from "react";
 
+import { text, valorHLetra, autoAnimationDuration, firstAutoText, userRoleInAnimation } from "./vars";
+
 
 export default function TerminalInit({showAnimation,setShowAnimation,showAnimationRef,showAgainRefElementRect}){
     const containerRef = useRef(null);
-    const text = `> initializing ${window.location.hostname}\n> loading\n> ...\n> Capable of everything`;
     const letters = text.split("");
     const { scrollYProgress, scrollY } = useScroll({target: containerRef});
     const lettersTransformed = useTransform(scrollYProgress, [0, 0.9], [0, letters.length ]);
     const progressTransformed = useTransform(scrollYProgress, [0, 1], [0, 1]);
-    const valorHLetra = window.innerHeight/10;
+    
     const animationSize = text.length * valorHLetra;
     const showPortfolioHeight = showAgainRefElementRect ? showAgainRefElementRect.bottom : animationSize+window.innerHeight;
-
+    const sizeToUseInAnim = userRoleInAnimation === "semi-manual" ? firstAutoText.length * valorHLetra : showPortfolioHeight;
     const [displayed, setDisplayed] = useState("");
     let containerRect;
     function startAnimation(){
-        animate(0, showPortfolioHeight, {
-            duration: 7,
+        if(userRoleInAnimation=="manual")return
+        animate(0, sizeToUseInAnim, {
+            duration: autoAnimationDuration,
             ease: "linear",
             onUpdate: (latest) => window.scrollTo({top: latest, behavior: "instant"})
           });
@@ -97,7 +99,7 @@ export default function TerminalInit({showAnimation,setShowAnimation,showAnimati
 
     return(
         <div className="w-full color-terminal terminal-cont relative" ref={containerRef} style={{height:`${animationSize}px`}}>
-            <motion.h1 className="sticky top-10 ">{
+            <motion.h1 className="sticky top-10 min-h-[100vh] after-terminal-type">{
             displayed.split('\n').map((line, i) => (
                 <React.Fragment key={i}>
                 {line}
