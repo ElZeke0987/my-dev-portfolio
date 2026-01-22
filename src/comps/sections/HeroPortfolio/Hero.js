@@ -20,8 +20,8 @@ export default function HeroSection(){
                     </div>
                     
                     <div className="hero-cta-section flex justify-center">
-                        <CTA className="cta-contract" text={infoHero[0].ctaContract}/>
-                        <CTA className="cta-projects" text={infoHero[0].ctaProjects}/>
+                        <CTA className="cta-contract" text={infoHero[0].ctaContract} href="#contact"/>
+                        <CTA className="cta-projects" text={infoHero[0].ctaProjects} href="#projects"/>
                     </div>
                     
                     {ImgHeroBG&&<Image src={heroBG} width={10000} height={10000} alt="Imagen del Producto" className="w-full absolute top-0 left-0 bg-hero rounded-lg shadow-lg bg-gray-100 z-0"/>}

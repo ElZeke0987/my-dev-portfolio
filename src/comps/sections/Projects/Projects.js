@@ -1,6 +1,5 @@
-import { projects } from "@/global-vars";
+import { projects } from "./projectsVars";
 import "./projects.scss";
-import Image from "next/image";
 import ProjectItem from "./ProjectItem";
 
 export default function Projects(){
