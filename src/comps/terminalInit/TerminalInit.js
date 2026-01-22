@@ -6,19 +6,21 @@ import { scrollToSmooth } from "./scrollToSmoothAsync";
 
 import React,{ useRef, useEffect, useState, } from "react";
 
-import { text, valorHLetra, autoAnimationDuration, firstAutoText, userRoleInAnimation } from "./vars";
+import { getValorHLetra, autoAnimationDuration, getFirstAutoText, userRoleInAnimation, getText } from "./vars";
 
 
 export default function TerminalInit({showAnimation,setShowAnimation,showAnimationRef,showAgainRefElementRect}){
     const containerRef = useRef(null);
-    const letters = text.split("");
+    const textToUse = getText();
+    const valorHLetra = getValorHLetra();
+    const letters = textToUse.split("");
     const { scrollYProgress, scrollY } = useScroll({target: containerRef});
     const lettersTransformed = useTransform(scrollYProgress, [0, 0.9], [0, letters.length ]);
     const progressTransformed = useTransform(scrollYProgress, [0, 1], [0, 1]);
     
-    const animationSize = text.length * valorHLetra;
+    const animationSize = textToUse.length * valorHLetra;
     const showPortfolioHeight = showAgainRefElementRect ? showAgainRefElementRect.bottom : animationSize+window.innerHeight;
-    const sizeToUseInAnim = userRoleInAnimation === "semi-manual" ? firstAutoText.length * valorHLetra : showPortfolioHeight;
+    const sizeToUseInAnim = userRoleInAnimation === "semi-manual" ? getFirstAutoText().length * valorHLetra : showPortfolioHeight;
     const [displayed, setDisplayed] = useState("");
     let containerRect;
     function startAnimation(){
@@ -93,7 +95,7 @@ export default function TerminalInit({showAnimation,setShowAnimation,showAnimati
         containerRect = containerRef.current.getBoundingClientRect();
     }
     return lettersTransformed.on("change", (latest) => {
-      setDisplayed(text.slice(0, Math.floor(latest)));
+      setDisplayed(textToUse.slice(0, Math.floor(latest)));
     });
   }, []);
 
