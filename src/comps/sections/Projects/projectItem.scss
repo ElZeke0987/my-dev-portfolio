@@ -1,7 +1,80 @@
-@use "../../../styles/varsFiles/projectVars.scss" as *;
+@use "./projectVars.scss" as *;
 @use "../../../styles/vars.scss" as *;
 .project-item{
     padding: $ProjectItemPadding;
+    .overlay-enter-animation{
+        animation: overlayEnterAnimation 0.5s ease-in-out;
+    }
+    @keyframes overlayEnterAnimation {
+        0% { 
+            opacity: 0;
+        }
+        100% { 
+            opacity: 1;
+        }
+    }
+    .terminal-project-confs{
+            color: #00ff00;
+            *{
+                color: #00ff00;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 1rem;
+            }
+
+        }
+    .overlay-cont-z{
+        z-index: 1000;
+    }
+    .blink-cta{
+        animation: blinkCTA 1.6s infinite ease-in-out;
+    }
+    @keyframes blinkCTA {
+        0% { 
+            background-color: #eeeeee; 
+            color: #000;
+        }
+        50% { 
+            background-color: transparent; 
+            color: #00ff00;
+        }
+        100% { 
+            background-color: #eeeeee; 
+            color: #000;
+        }
+    }
+    .on-delete{
+        //border: 1px solid #ff0000;
+    }
+    .button-style-chooser{
+        margin-top: 1rem;
+        gap: 3rem;
+        button{
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 1.7px solid #00ff00;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            color: #00ff00;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                background-color: #00ff00;
+                color: #000;
+            }
+        }
+    }
+    .overlay-form-cont-confs{
+        transition: all 0.5s linear;
+        touch-action: none;
+        z-index: 999;
+        width: 90vw;
+        height: none;
+        padding: 1rem;
+        background-color: $ProjectItemOverBG;
+        border-radius: $ProjectItemOverRadius;
+        color: $ProjectItemOverColor;
+        gap: 20px
+    }
     .inner-item{
         border: $ProjectItemBorder;
     }
@@ -21,7 +94,7 @@
     }
    
     img{
-
+        object-fit: cover;
     }
     .over-text{
         position: absolute;

@@ -20,7 +20,7 @@ export default function Projects(){
                 {projects.map((pr, i)=>{
                     return(
                     <div key={i}>
-                        <ProjectItem title={pr.title} subtitle={pr.subtitle} text={pr.text} deployState={pr.deployState} />
+                        <ProjectItem projectObject={pr} />
 
                     </div>)
                 })}

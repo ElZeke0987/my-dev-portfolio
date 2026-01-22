@@ -6,6 +6,11 @@ html{
     scroll-behavior: smooth;
 }
 
+.padding-top{
+    
+    padding-top: $PaddingTop;
+}
+
 .nav-toggler{
     background-color: $NavBG;
     gap: $NavGapSeparation;

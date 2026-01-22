@@ -9,7 +9,7 @@ export default function Nav(){
     const [openNavbar, setOpenNavbar]=useState(false);
 
     return (
-        <div className="w-full">
+        <div className="w-full padding-top">
             <nav className=" w-full nav-toggler-height">
                 <div className=" flex justify-center items-center nav-toggler wi-full nav-transp-item">
                     <a href="#" className="text-white text-lg font-bold nav-logo">{titlesObj.logoTitle}</a>
