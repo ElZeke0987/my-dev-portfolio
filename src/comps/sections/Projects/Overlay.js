@@ -117,7 +117,7 @@ export default function Overlay({prTitle, prSubtitle, prText, prTechs, prUrl, se
             onPointerCancel={onUp}/*pos.y*/
             style={{transform: `translate(${translate}) scale(${scale}) rotate(${ (pos.x < 0 ? -1 : 1) * getDistance(pos.x, pos.y)/30}deg)`}}>
               
-              <div>{JSON.stringify(pos)}</div>
+              {/*<div>{JSON.stringify(pos)}</div>*/}
               {menuStyle=="terminal"?TerminalProjectMenuStyle():null}
               <div className="absolute top-0 left-0 w-full h-full bg-red z-40 on-delete"
               style={{pointerEvents: "none",
