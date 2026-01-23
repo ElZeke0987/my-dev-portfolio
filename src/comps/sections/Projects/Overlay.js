@@ -22,7 +22,19 @@ export default function Overlay({prTitle, prSubtitle, prText, prTechs, prUrl, se
               </div>
       </div>)
     }
-    const [menuStyle, setMenuStyle]=useState("terminal");
+
+    function WebProjectMenuStyle(){
+      return(
+      <div className="default-overlay">
+        <h3>{prTitle}</h3>
+        <h4>{prSubtitle}</h4>
+        <hr />
+        <p>{prText}</p>
+        <a href={prUrl} target="_blank">Visit Project</a>
+      </div>)
+    }
+
+    const [menuStyle, setMenuStyle]=useState("default");
     const [prTitleTyping, setPrTitleTyping]=useState("");
     const [prSubtitleTyping, setPrSubtitleTyping]=useState("none");
     const [prTextTyping, setPrTextTyping]=useState("");
@@ -84,7 +96,7 @@ export default function Overlay({prTitle, prSubtitle, prText, prTechs, prUrl, se
   }
 
   function onDown(e){
-    
+    if(e.target.tagName === "A") return;
     e.stopPropagation()
     setPointerDown(true);
     setPos(getPosFormula(e));
@@ -119,11 +131,14 @@ export default function Overlay({prTitle, prSubtitle, prText, prTechs, prUrl, se
               
               {/*<div>{JSON.stringify(pos)}</div>*/}
               {menuStyle=="terminal"?TerminalProjectMenuStyle():null}
+              {menuStyle=="default"?WebProjectMenuStyle():null}
               <div className="absolute top-0 left-0 w-full h-full bg-red z-40 on-delete"
               style={{pointerEvents: "none",
                 transform: ``
               }}
-              ></div>
+              >
+                
+              </div>
             </div>
             <div className="flex button-style-chooser">
               <button onClick={() => setMenuStyle("terminal")} className={menuStyle=="terminal"?"bg-[#00ff00] text-[#000]":"bg-transparent text-[#00ff00]"}>Terminal</button>

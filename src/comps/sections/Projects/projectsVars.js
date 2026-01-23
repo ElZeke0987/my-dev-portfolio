@@ -3,7 +3,7 @@ export const projects=[
     {
         title: "2110 E-Commerce",
         fileDecorativeTitle: "2110",
-        subtitle: "",
+        subtitle: "Shop panel y todo",
         text: `E-Commerce para un emprendimiento de accesorios, con carrito de compras, pagos, catalogo, buena landing page, envios, etc.`,
         deployState: true,
         techs: ["react", "node", "sass", "express", "tailwind"],
