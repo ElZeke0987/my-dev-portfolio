@@ -1,5 +1,9 @@
 @use "../../styles/vars.scss" as *;
 
+.gradient-both{
+    background: $NavAndHeroBG;
+}
+
 .nav-sticky-conf{
     z-index: 1000;
     position: sticky;

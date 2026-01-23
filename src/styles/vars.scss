@@ -1,23 +1,9 @@
 
-$CartLengthBG: rgb(181, 80, 3);
-$CartLengthColor: #ffffff;
-$CartLengthWX: 1.2rem;
-$CartLengthHY: 1.2rem;
-$CartLengthTop: -60%;
-$CartLengthLeft: 90%;
-$CartLengthTxtSize: 0.8rem;
-
-$NavLinksQuant: 4;
-$OfferBG: #222;
-$TranspNavBG: none;
-$OpenNavAnimMS: 0.5s;
-$CloseNavAnimMS: 0.2s;
-$NavHY: 10vh;
 
 /*----Sections Backgrounds----*/
-$NavBG: #1a1a1a;
-$HeroSectionBG: #1a1a1a;
-$ProductSectionBG: #1a1a1a;
+
+$NavAndHeroBG: linear-gradient(180deg, #10101c 0%, transparent 100%);
+$ProductSectionBG: transparent;
 
 $featuresGradientPos: 34%;
 $featuresSectionGradientUpper: $ProductSectionBG;

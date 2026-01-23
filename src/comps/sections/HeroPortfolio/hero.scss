@@ -1,5 +1,5 @@
 @use "../../../styles/vars" as *;
-@use "../../../styles/varsFiles/heroVars.scss" as *;
+@use "./heroVars.scss" as *;
 @use "../../../styles/animations.scss" as*;
 
 .hero-image{
@@ -22,10 +22,12 @@
 }
 .hero-cont{
     height: $HeroContHY;
-    background: rgba(13, 72, 161, 0.475);
-    backdrop-filter: blur(18px);
+   // background: rgba(13, 72, 161, 0.475);
+    //backdrop-filter: blur(18px);
     border-radius: 20px;
-    border: $HeroCTASectionBorder;
+    box-shadow:
+        0 20px 30px rgba(0, 55, 255, 0.6);
+   // border: $HeroCTASectionBorder;
     .textual-hero{
         width: $TextualHeroWX;
         .hero-cta-section{
@@ -47,7 +49,7 @@
     }
 }
 .hero-section{
-    background-color: $HeroSectionBG;
+    background: $HeroSectionBG;
     height: $HeroSectionHY;
     /*.textual-hero{
         align-self: $HeroTextualAlign;

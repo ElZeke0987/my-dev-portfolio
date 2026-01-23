@@ -2,6 +2,9 @@
 @use "../../../styles/animations.scss" as *;
 @use "./headerVars.scss" as *;
 
+
+$TogglerResponsiveHeight: 100vh;
+
 html{
     scroll-behavior: smooth;
 }
@@ -27,6 +30,13 @@ html{
 .nav-logo{
     animation-name: fadeIn;
     animation-duration: $NavLogoFadeInS;
+}
+.nav-white-button{
+    background-color: #f9070771;
+    backdrop-filter: blur(4px);
+    color: #eee;
+    border-radius: 15px;
+    padding: 0.5rem;
 }
 .nav-link-item{
     .cart-length{
@@ -63,10 +73,16 @@ html{
 }
 @keyframes abrirNav {
     0%{
-        top: -90vh;
+        top: $TogglerResponsiveHeight;
+    }
+    1%{
+        
+    }
+    99%{
+        border-top: none;
     }
     100%{
-        top: $NavHY;
+        top: 0;
     }
 }
 
@@ -75,7 +91,7 @@ html{
         top: $NavHY;
     }
     100%{
-        top: -90vh;
+        top: -$TogglerResponsiveHeight;
     }
 }
 
@@ -100,7 +116,7 @@ html{
         
         .nav-toggler-list{
 
-            height: 90vh;
+            height: $TogglerResponsiveHeight;
             width: 100%;
             position: fixed;
             z-index: 900;
@@ -110,6 +126,8 @@ html{
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+            background-color: #000000a6;
+            backdrop-filter: blur(5px);
             a{
                 font-size: 40px;
             }

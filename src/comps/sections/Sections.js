@@ -50,7 +50,7 @@ export default function Sections(){
       else {
         setStyle({
           position: "fixed",
-          top: "100px",
+          top: "",
 
         });
         setOneStyleSet(true);
@@ -78,7 +78,7 @@ export default function Sections(){
         <div className="flex flex-col" ref={limitRef}>
             
             <LazyFrame>
-                <div className={(ImgTransNavBG?" first-sect-trans-nav ":"")+" relative z-dist"} >
+                <div className={(ImgTransNavBG?" first-sect-trans-nav ":"")+" relative z-dist gradient-both"} >
                     {/* Poner aca adentro las secciones que tendran el mismo fondo */}
                     <Header ref={navRef} style={style}/>
 
