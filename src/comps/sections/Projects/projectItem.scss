@@ -96,6 +96,7 @@
             }
             button, a{
                 background-color: #7a0000;
+                animation: blinkCTA2 3s infinite ease-in-out;
                 color: #eeeeee;
                 border: none;
                 padding: 0.5rem 1rem;
@@ -105,6 +106,20 @@
                 &:hover{
                     background-color: #eeeeee;
                     color: #7a0000;
+                }
+            }
+            @keyframes blinkCTA2 {
+                0% { 
+                    background-color: #eeeeee; 
+                    color: #7a0000;
+                }
+                50% { 
+                    background-color: #7a0000; 
+                    color: #eee;
+                }
+                100% { 
+                    background-color: #eeeeee; 
+                    color: #000;
                 }
             }
         }

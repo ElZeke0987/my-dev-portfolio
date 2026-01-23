@@ -3,7 +3,38 @@ import { useState, useEffect, useRef } from "react";
 
 
 export default function Overlay({prTitle, prSubtitle, prText, prTechs, prUrl, setShowOverlay, showOverlay, fileDecorativeTitle}) {
+    const [menuStyle, setMenuStyle]=useState("default");
+    const [prTitleTyping, setPrTitleTyping]=useState("");
+    const [prSubtitleTyping, setPrSubtitleTyping]=useState("none");
+    const [prTextTyping, setPrTextTyping]=useState("");
+    const [prUrlTyping, setPrUrlTyping]=useState("");
+    const [CTATyping, setCTATyping]=useState("");
+  
     function TerminalProjectMenuStyle(){
+      const type = async ( setter, textToType, speed = 100) => {
+          for(let j = 0; j < textToType.length; j++){
+          await new Promise(resolve => setTimeout(resolve, speed));
+          setter(textToType.slice(0, j + 1));
+          }
+      };
+      useEffect(() => {
+            type(setPrTitleTyping, prTitle, 100);
+            type(setPrSubtitleTyping, prSubtitle, 200);
+            type(setPrTextTyping, prText, 25);
+
+        }, [prTitle, prSubtitle, prText, prUrl]);
+        useEffect(() => {
+          if(prTextTyping==prText){
+            type(setPrUrlTyping, prUrl, 10);
+          }
+        }, [prTextTyping]);
+        useEffect(() => {
+          if(prUrlTyping==prUrl){
+            type(setCTATyping, "Click to visit project", 10);
+          }
+        }, [prUrlTyping]);
+
+
       return(<div>
               <h3>{window.location.hostname}/{fileDecorativeTitle}/project-name{">"}  <br /> {prTitleTyping}</h3>
               <br />
@@ -34,37 +65,9 @@ export default function Overlay({prTitle, prSubtitle, prText, prTechs, prUrl, se
       </div>)
     }
 
-    const [menuStyle, setMenuStyle]=useState("default");
-    const [prTitleTyping, setPrTitleTyping]=useState("");
-    const [prSubtitleTyping, setPrSubtitleTyping]=useState("none");
-    const [prTextTyping, setPrTextTyping]=useState("");
-    const [prUrlTyping, setPrUrlTyping]=useState("");
-    const [CTATyping, setCTATyping]=useState("");
-    const type = async ( setter, textToType, speed = 100) => {
-        for(let j = 0; j < textToType.length; j++){
-        await new Promise(resolve => setTimeout(resolve, speed));
-        setter(textToType.slice(0, j + 1));
-        }
-    };
-    useEffect(() => {
-
     
-
-    type(setPrTitleTyping, prTitle, 100);
-    type(setPrSubtitleTyping, prSubtitle, 200);
-    type(setPrTextTyping, prText, 25);
-
-  }, [prTitle, prSubtitle, prText, prUrl]);
-  useEffect(() => {
-    if(prTextTyping==prText){
-      type(setPrUrlTyping, prUrl, 10);
-    }
-  }, [prTextTyping]);
-  useEffect(() => {
-    if(prUrlTyping==prUrl){
-      type(setCTATyping, "Click to visit project", 10);
-    }
-  }, [prUrlTyping]);
+    
+    
 
   function getDistance(x, y){
     return Math.sqrt(x*x + y*y);
