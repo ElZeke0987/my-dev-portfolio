@@ -5,6 +5,8 @@ export const onlyNavTransp = true;
 export const ImgTransNavUrl="/images/hero-bg.png";
 export const addToCartSystem = false;
 
+export const meImg="/images/me/casual-me.png";
+
 export const taxes=10;//%
 export const delivery=0;//USD o $
 

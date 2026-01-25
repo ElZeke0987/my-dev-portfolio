@@ -14,7 +14,7 @@ export default function ProjectItem({projectObject}){
 
     const [showOverlay, setShowOverlay] = useState(false)
     useEffect(() => {
-        console.log("showOverlay", showOverlay)
+        //console.log("showOverlay", showOverlay)
     }, [showOverlay])
     return(
         <div className="project-item w-full h-full ">

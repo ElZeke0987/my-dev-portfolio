@@ -30,31 +30,7 @@ export function TerminalProjectMenuStyle({prTitle, prSubtitle, prText, prUrl, fi
       }
     }, [prUrlTyping]);
 
-    // useEffect(async () => {
-    //   let cancelled = false;
-
-    //   //const run = async () => {
-    //     await type(setPrTitleTyping, prTitle, 100);
-    //     //if (cancelled) return;
-
-    //     await type(setPrSubtitleTyping, prSubtitle, 200);
-    //     //if (cancelled) return;
-
-    //     await type(setPrTextTyping, prText, 25);
-    //     //if (cancelled) return;
-
-    //     await type(setPrUrlTyping, prUrl, 10);
-    //     //if (cancelled) return;
-
-    //     await type(setCTATyping, "Click to visit project", 10);
-    //   //};
-
-    //   //await run();
-
-    //   //return () => {
-    //   //  cancelled = true;
-    //   //};
-    // }, [prTitle, prSubtitle, prText, prUrl]);
+    
 
     return(<div>
             <h3>{window.location.hostname}/{fileDecorativeTitle}/project-name{">"}  <br /> {prTitleTyping}</h3>

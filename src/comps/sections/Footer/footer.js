@@ -7,7 +7,6 @@ function FooterLinks(){
     return(
         <div className="footer-links-cont flex">
             <div className="footer-other-links flex flex-col md:flex-row">
-                {console.log(footerLinksSections)}
                 {footerLinksSections.map((section,indexSection)=>{
                     return(
                     <div className="foo-section-cont" key={indexSection}>

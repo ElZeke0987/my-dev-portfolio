@@ -4,7 +4,7 @@ import CTA from "../../reusable/cta/CTA"
 import  Image  from "next/image";
 import "./hero.scss";
 import "../general.scss";
-import { heroBG, heroImages, ImgHeroBG, infoHero } from "@/global-vars";
+import { heroBG, heroImages, ImgHeroBG, infoHero, meImg} from "@/global-vars";
 import { useScrollPosition } from "../../scrollPositionGetter/ScrollPosition";
 
 export default function HeroSection(){
@@ -14,7 +14,7 @@ export default function HeroSection(){
             <div className="flex flex-col h-full md:flex-row hero-cont items-center justify-center">
                 <div className={"textual-hero flex flex-col items-center justify-center z-10 "+(ImgHeroBG?"relative":"")}>
                     <div className="w-full flex flex-col items-center justify-center">
-                        <Image src="/images/me/me-10-10.jpg" width={10000} height={10000} className="hero-me"/>
+                        <Image src={meImg} width={10000} height={10000} className="hero-me" alt="Me"/>
                         <h1 className="text-4xl md:text-5xl font-bold mb-4 hero-title text-center">{infoHero[0].principalTitle}</h1>
                         <h2 className="text-lg mb-6 hero-sub">{infoHero[0].subTitle}</h2>
                     </div>

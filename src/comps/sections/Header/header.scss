@@ -16,7 +16,7 @@ html{
 
 .nav-toggler{
     background-color: $NavBG;
-    gap: $NavGapSeparation;
+    gap: $NavGapSeparationDesktop;
 }
 
  .wi-full{
@@ -102,7 +102,7 @@ html{
     .nav-toggler-height{
         z-index: 1000 !important;
         position: relative;
-        
+        top: $PaddingTop;
         *{
             position: relative;
             z-index: 1000;
@@ -110,6 +110,7 @@ html{
 
         .nav-toggler{
             height: $NavHY;
+            gap: $NavGapSeparationResponsive;
             width: 100%;
             z-index: 1000;
         }

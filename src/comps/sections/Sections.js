@@ -77,16 +77,16 @@ export default function Sections(){
         </LazyFrame>
         <div className="flex flex-col" ref={limitRef}>
             
-            <LazyFrame>
-                <div className={(ImgTransNavBG?" first-sect-trans-nav ":"")+" relative z-dist gradient-both"} >
-                    {/* Poner aca adentro las secciones que tendran el mismo fondo */}
-                    <Header ref={navRef} style={style}/>
+            
+              <div className={(ImgTransNavBG?" first-sect-trans-nav ":"")+" relative z-dist gradient-both"} >
+                  {/* Poner aca adentro las secciones que tendran el mismo fondo */}
+                  <Header ref={navRef} style={style}/>
 
-                    <HeroSection/>
-                    {ImgTransNavBG&&<Image src={ImgTransNavUrl} width={500} height={500} alt="Fondo de Hero y Nav" className="w-full h-full absolute top-0 left-0 bg-first-trans"/>}
+                  <HeroSection/>
+                  {ImgTransNavBG&&<Image src={ImgTransNavUrl} width={500} height={500} alt="Fondo de Hero y Nav" className="w-full h-full absolute top-0 left-0 bg-first-trans"/>}
 
-                </div>
-            </LazyFrame>
+              </div>
+            
             <LazyFrame id="projects">
                 <Projects/>
             </LazyFrame>

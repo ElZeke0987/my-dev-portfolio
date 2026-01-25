@@ -19,6 +19,28 @@
     }
 }
 
+
+
+
+.skip-button{
+    cursor: pointer;
+    top: 83%;
+    left: 75%;
+    background-color: rgba(255, 216, 216, 0.078);
+    padding: .5rem 1rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.6s;
+    &:hover{
+        background-color: #eee;
+        color: #0b5d01;
+    }
+    @media (min-width: 768px) {
+        top: 80%;
+        left: 92%;
+    }
+}
+
 .icon-to-show{
     cursor: pointer;
     transform: rotate(-90deg);

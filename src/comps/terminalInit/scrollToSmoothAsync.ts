@@ -5,6 +5,7 @@
  * @returns {Promise<void>} - Se resuelve cuando el scroll termina
  */
 export async function scrollToSmooth(targetY: number, tolerance = 2): Promise<void> {
+
   return new Promise((resolve: (value: undefined) => void) => {
     // Inicia el scroll suave
     window.scrollTo({ top: targetY, behavior: 'smooth' });

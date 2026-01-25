@@ -31,7 +31,7 @@ export default function Overlay({prTitle, prSubtitle, prText, prTechs, prUrl, se
   function getPosFormula(e){
     if(!elementRef.current) return {x: 0, y: 0};
     const rectElement = elementRef.current.getBoundingClientRect()
-    console.log("ELEMENT TARGET: ", elementRef.current)
+    //console.log("ELEMENT TARGET: ", elementRef.current)
     return {x: e.clientX - rectElement.width/2, y: e.clientY - rectElement.height}
   }
 
@@ -40,13 +40,13 @@ export default function Overlay({prTitle, prSubtitle, prText, prTechs, prUrl, se
     e.stopPropagation()
     setPointerDown(true);
     setPos(getPosFormula(e));
-    console.log("Pointer down", pos);
+    //console.log("Pointer down", pos);
   }
   function onUp(e){
     e.stopPropagation()
     setPointerDown(false);
     setPos({x: 0, y: 0});
-    console.log("Pointer up", pos);
+    //console.log("Pointer up", pos);
     if(getDistance(pos.x, pos.y) > 100){
       setShowOverlay(false);
     }
