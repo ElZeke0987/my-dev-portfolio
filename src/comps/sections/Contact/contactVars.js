@@ -19,7 +19,7 @@ export const subjects=[
 ]
 
 export const emailJsIds={
-    serviceId: "service_portfolio_sebseg",
-    templateId: "template_with_subject",
-    userId: "64Y3-Dp84f6wLW9aE",
+    serviceId: "service_vakfl2n",
+    templateId: "template_hbm2ve5",
+    userId: "gXWpTK3-tUL1zr_VO",
 }

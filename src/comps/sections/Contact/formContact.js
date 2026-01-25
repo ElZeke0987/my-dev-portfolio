@@ -10,9 +10,9 @@ export default function FormContact(){
     const [secondSubject, setSecondSubject]=useState("")
     const [status, setStatus] = useState(undefined);
     const [formValues, setFormValues]=useState({
-        fullName: "",
+        name: "",
         email: "",
-        content: "",
+        message: "",
     })
     function handleFirstSubjectSelect(opt){
         setSubject(opt);
@@ -41,8 +41,8 @@ export default function FormContact(){
             <div className="w-full flex flex-col items-center justify-center contact-form-brd overflow-hidden">
                 <form className="contact-form flex flex-col " id="contactForm" onSubmit={handleSubmit}>
                     <div className="flex flex-col">
-                        <label>Full Name</label>
-                        <input type="text" name="fullName" onChange={handleInputChange}/>
+                        <label>Name</label>
+                        <input type="text" name="name" onChange={handleInputChange}/>
                     </div>
                     <div className="flex flex-col">
                         <label>Email</label>
@@ -63,7 +63,7 @@ export default function FormContact(){
                     <div className="flex flex-col">
                         <label>Content of email</label>
                     
-                        <textarea name="content" id="input" className="form-control" rows="3" required="required" onChange={handleInputChange}></textarea>
+                        <textarea name="message" id="input" className="form-control" rows="3" required="required" onChange={handleInputChange}></textarea>
                         
                     </div>
                     
