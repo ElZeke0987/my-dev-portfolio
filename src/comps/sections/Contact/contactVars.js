@@ -1,5 +1,9 @@
 export const subjects=[
     {
+        title:"Contratacion",
+        val: "contract",
+    },
+    {
         title:"Website creation",
         val: "web-creation",
         secondSubjects: [
