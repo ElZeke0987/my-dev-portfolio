@@ -1,7 +1,7 @@
 
 export const ImgHeroBG = false;//Fondo en la hero section de imagen
 export const ImgTransNavBG = false;
-export const onlyNavTransp = true;
+export const onlyNavTransp = true; 
 export const ImgTransNavUrl="/images/hero-bg.png";
 export const addToCartSystem = false;
 
@@ -24,7 +24,7 @@ export const infoHero=[
 ]
 
 export const navLinks=[
-    {href:"/", text:"Start"},
+    {href:"#hero", text:"Start"},
     {href:"#projects", text:"Projects"},
     {href:"#skills", text:"Skills"},
     {href:"#services", text:"Services"},

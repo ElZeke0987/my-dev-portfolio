@@ -10,7 +10,7 @@ import { useScrollPosition } from "../../scrollPositionGetter/ScrollPosition";
 export default function HeroSection(){
     const scrollPosition = useScrollPosition();
     return(
-        <section className="hero-section first-hero flex justify-center items-center">
+        <section className="hero-section first-hero flex justify-center items-center" id="hero">
             <div className="flex flex-col h-full md:flex-row hero-cont items-center justify-center">
                 <div className={"textual-hero flex flex-col items-center justify-center z-10 "+(ImgHeroBG?"relative":"")}>
                     <div className="w-full flex flex-col items-center justify-center">
