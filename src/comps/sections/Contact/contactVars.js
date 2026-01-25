@@ -1,7 +1,7 @@
 export const subjects=[
     {
-        title:"Contratacion",
-        val: "contract",
+        title:"Job offer",
+        val: "job-offer",
     },
     {
         title:"Website creation",
