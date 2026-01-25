@@ -28,7 +28,7 @@ export const navLinks=[
     {href:"#projects", text:"Projects"},
     {href:"#skills", text:"Skills"},
     {href:"#services", text:"Services"},
-    {href:"#contact", text:"Contact Me"},
+    {href:"#contact", text:"Contact Me (WIP)"},
 ]
 
 export const titlesObj={
